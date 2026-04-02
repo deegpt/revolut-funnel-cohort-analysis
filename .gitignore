@@ -1,0 +1,31 @@
+# ──────────────────────────────────────────────
+# Data files — never commit raw CSVs to this repo
+# Run data/generate_data.py locally to produce them
+# ──────────────────────────────────────────────
+data/*.csv
+data/*.parquet
+data/*.xlsx
+data/*.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Tableau packaged workbooks (large binaries)
+*.twbx
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
