@@ -1,1 +1,5 @@
 user_id,signup_date,signup_week,signup_month,country,region,acquisition_channel,device_type,plan_at_signup,kyc_risk_band,primary_use_case
+U000001,2024-09-05,2024-W36,2024-09,FR,EEA,organic_search,android,Standard,low,p2p_only
+U000002,2024-02-13,2024-W07,2024-02,IE,Other,direct,android,Standard,low,everyday_spend
+U000003,2024-01-10,2024-W02,2024-01,GB,UK,paid_social,ios,Plus,high,savings
+-- NOTE: Full 20000-row dataset. Download from Releases or generate via data/generate_data.py
