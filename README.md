@@ -22,7 +22,7 @@ The dataset is **synthetic but behaviourally realistic** — event distributions
 
 I built this project at the intersection of two experiences:
 
-**1. Revolut (Customer Operations)**
+**1. Revolut (Customer Operations)**  
 During my time at Revolut, I regularly saw the same friction patterns from the customer side:
 - Users getting stuck during KYC document upload or biometric capture — and escalating to support before completing registration
 - New users who funded their accounts but never made a first transaction, then churning quietly
@@ -31,7 +31,7 @@ During my time at Revolut, I regularly saw the same friction patterns from the c
 
 These are real operational patterns that live analysts and product teams investigate. This dashboard turns those observed patterns into a structured analytical framework.
 
-**2. Operational SLA & CSAT Analytics (Portfolio Project)**
+**2. Operational SLA & CSAT Analytics (Portfolio Project)**  
 My existing SLA Analysis project built SQL-backed dashboards for SLA breach rates and CSAT scores across support ticket categories. This project **extends that lens into product analytics**: rather than stopping at "was the ticket resolved on time?", it asks "what happened to that user's product engagement after the ticket?"
 
 ---
@@ -63,7 +63,7 @@ data/revolut_date_dim.csv           — calendar dimension for week/month cohort
 ```
 revolut-funnel-cohort-analysis/
 │
-├── README.md                             ← You are here
+├── README.md
 │
 ├── data/
 │   ├── revolut_users.csv
@@ -72,24 +72,24 @@ revolut-funnel-cohort-analysis/
 │   └── revolut_date_dim.csv
 │
 ├── sql/
-│   ├── 01_onboarding_funnel.sql          ← Full KYC funnel with drop-off %
-│   ├── 02_funnel_by_segment.sql          ← Funnel sliced by risk/plan/channel/region
-│   ├── 03_weekly_cohort_retention.sql    ← W0–W25 cohort retention heatmap
-│   ├── 04_monthly_cohort_retention.sql   ← M0–M11 by plan tier & use case
-│   ├── 05_sla_impact_on_retention.sql    ← SLA breach → 30d/90d retention
-│   ├── 06_feature_adoption_funnel.sql    ← Feature depth funnel (FX/P2P/savings/trading)
-│   ├── 07_time_to_activation.sql         ← Hours/days from install to first payment
-│   ├── 08_sla_csat_summary.sql           ← SLA breach rate & CSAT by category/severity
-│   ├── 09_plan_arpu_and_engagement.sql   ← ARPU proxy and engagement by plan tier
-│   └── 10_early_churn_risk.sql           ← "One-and-done" early churn identification
+│   ├── 01_onboarding_funnel.sql
+│   ├── 02_funnel_by_segment.sql
+│   ├── 03_weekly_cohort_retention.sql
+│   ├── 04_monthly_cohort_retention.sql
+│   ├── 05_sla_impact_on_retention.sql
+│   ├── 06_feature_adoption_funnel.sql
+│   ├── 07_time_to_activation.sql
+│   ├── 08_sla_csat_summary.sql
+│   ├── 09_plan_arpu_and_engagement.sql
+│   └── 10_early_churn_risk.sql
 │
 ├── tableau_notes/
-│   └── TABLEAU_BUILD_GUIDE.md            ← Sheet-by-sheet Tableau implementation guide
+│   └── TABLEAU_BUILD_GUIDE.md
 │
 └── docs/
-    ├── INSIGHTS.md                        ← Key analytical findings from the data
-    ├── BUSINESS_RECOMMENDATIONS.md        ← Business actions derived from insights
-    └── METHODOLOGY.md                     ← Dataset generation rationale and assumptions
+    ├── INSIGHTS.md
+    ├── BUSINESS_RECOMMENDATIONS.md
+    └── METHODOLOGY.md
 ```
 
 ---
@@ -97,7 +97,7 @@ revolut-funnel-cohort-analysis/
 ## ⚙️ How to Run
 
 ### Option A — Tableau Desktop (direct CSV)
-1. Open Tableau Desktop → Connect to Text File → load `data/revolut_users.csv`
+1. Open Tableau Desktop → Connect to Text File → load `revolut_users.csv`
 2. Add relationships: `revolut_events`, `revolut_support_tickets`, `revolut_date_dim`
 3. Follow `tableau_notes/TABLEAU_BUILD_GUIDE.md` for sheet-by-sheet build instructions
 
@@ -137,4 +137,4 @@ duckdb -c "
 
 ## 🏷️ Skills Demonstrated
 
-`SQL` · `CTEs` · `Window Functions` · `Cohort Analysis` · `Funnel Analysis` · `Tableau` · `Data Modelling` · `Fintech Domain` · `SLA Analytics` · `CSAT Analysis` · `Synthetic Data Design` · `Product Analytics`
+`SQL` · `CTEs` · `Window Functions` · `Cohort Analysis` · `Funnel Analysis` · `Tableau` · `Data Modelling` · `Fintech Domain` · `SLA Analytics` · `CSAT Analysis` · `Synthetic Data Design` · `Product Analytics` · `Python`
